@@ -1,0 +1,1044 @@
+/* =========================================
+   SLICE & SIP
+   MAIN WEBSITE CSS
+========================================= */
+
+
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background: #FFF8E7;
+
+    color: #171717;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   COLOURS
+========================================= */
+
+:root {
+
+    --yellow: #FFC400;
+
+    --dark-yellow: #E5A900;
+
+    --black: #171717;
+
+    --cream: #FFF8E7;
+
+    --white: #FFFFFF;
+
+    --grey: #666666;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            rgba(255,196,0,0.20),
+            transparent 35%
+        ),
+
+        var(--cream);
+
+    overflow: hidden;
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+
+    width: 155px;
+
+    height: 155px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+
+    filter:
+        drop-shadow(0 5px 8px rgba(0,0,0,0.15));
+
+}
+
+
+/* =========================================
+   BRAND NAME
+========================================= */
+
+.hero h1 {
+
+    font-size: clamp(38px, 11vw, 58px);
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: var(--black);
+
+}
+
+
+.hero h1 span {
+
+    color: var(--yellow);
+
+}
+
+
+/* =========================================
+   TAGLINE
+========================================= */
+
+.tagline {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 9px 18px;
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transform: skew(-5deg);
+
+    box-shadow:
+        5px 5px 0 var(--black);
+
+}
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.categories {
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.categories span {
+
+    color: var(--yellow);
+
+    font-weight: 900;
+
+}
+
+
+/* =========================================
+   HERO TEXT
+========================================= */
+
+.hero-text {
+
+    margin-top: 25px;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    color: var(--black);
+
+}
+
+
+.hero-text strong {
+
+    color: #C28C00;
+
+}
+
+
+/* =========================================
+   BACKGROUND GRAPHICS
+========================================= */
+
+.graphic {
+
+    position: absolute;
+
+    z-index: 1;
+
+    opacity: 0.12;
+
+    pointer-events: none;
+
+    user-select: none;
+
+}
+
+
+.pizza-graphic {
+
+    font-size: 110px;
+
+    left: -35px;
+
+    top: 40px;
+
+    transform: rotate(-25deg);
+
+}
+
+
+.burger-graphic {
+
+    font-size: 85px;
+
+    right: -25px;
+
+    top: 130px;
+
+    transform: rotate(15deg);
+
+}
+
+
+.coffee-graphic {
+
+    font-size: 75px;
+
+    left: 15px;
+
+    bottom: 30px;
+
+    transform: rotate(-10deg);
+
+}
+
+
+.star-graphic {
+
+    font-size: 65px;
+
+    right: 40px;
+
+    bottom: 50px;
+
+    color: var(--yellow);
+
+}
+
+
+/* =========================================
+   FOOD IMAGE SLIDER
+========================================= */
+
+.food-section {
+    padding: 10px 15px 35px;
+    background: var(--cream);
+}
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 25px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+
+    animation: autoSlide 12s infinite;
+}
+
+
+.slides img {
+    width: 25%;
+    height: 100%;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   AUTOMATIC SLIDE
+========================================= */
+
+@keyframes autoSlide {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    45% {
+        transform: translateX(-25%);
+    }
+
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    70% {
+        transform: translateX(-50%);
+    }
+
+
+    75% {
+        transform: translateX(-75%);
+    }
+
+    95% {
+        transform: translateX(-75%);
+    }
+
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================
+   IMAGE LABEL
+========================================= */
+
+.image-label {
+
+    position: absolute;
+
+    bottom: 15px;
+    left: 15px;
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+    padding: 8px 13px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   SLIDER DOTS
+========================================= */
+
+.slider-dots {
+
+    position: absolute;
+
+    bottom: 15px;
+    right: 15px;
+
+    display: flex;
+
+    gap: 6px;
+
+    z-index: 5;
+}
+
+
+.dot {
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    opacity: 0.6;
+}
+
+
+.dot.active {
+
+    background: var(--yellow);
+
+    opacity: 1;
+
+}
+
+/* =========================================
+   ACTION SECTION
+========================================= */
+
+.actions {
+
+    padding: 35px 15px 40px;
+
+    background: var(--black);
+
+}
+
+
+.actions h2 {
+
+    text-align: center;
+
+    color: var(--yellow);
+
+    font-size: 20px;
+
+    margin-bottom: 25px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================
+   ACTION BUTTON
+========================================= */
+
+.action-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    width: 100%;
+
+    padding: 17px;
+
+    margin-bottom: 13px;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.action-button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.action-button:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* =========================================
+   YELLOW BUTTON
+========================================= */
+
+.yellow-button {
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+    box-shadow:
+        0 5px 0 #B78A00;
+
+}
+
+
+/* =========================================
+   BLACK BUTTON
+========================================= */
+
+.black-button {
+
+    background: #222222;
+
+    color: var(--white);
+
+    border: 2px solid var(--yellow);
+
+}
+
+
+/* =========================================
+   BUTTON ICON
+========================================= */
+
+.button-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 26px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================================
+   BUTTON CONTENT
+========================================= */
+
+.button-content {
+
+    text-align: left;
+
+    flex: 1;
+
+}
+
+
+.button-content strong {
+
+    display: block;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+}
+
+
+.button-content small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    opacity: 0.75;
+
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.arrow {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================
+   LOCATION SECTION
+========================================= */
+
+.location-section {
+
+    position: relative;
+
+    padding: 45px 15px;
+
+    background: var(--cream);
+
+    text-align: center;
+
+    overflow: hidden;
+
+}
+
+
+.location-section h2 {
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+}
+
+
+.location-section h2::after {
+
+    content: "";
+
+    display: block;
+
+    width: 55px;
+
+    height: 5px;
+
+    background: var(--yellow);
+
+    margin: 8px auto;
+
+}
+
+
+.location-decoration {
+
+    font-size: 90px;
+
+    opacity: 0.08;
+
+    position: absolute;
+
+    right: -15px;
+
+    top: 10px;
+
+    transform: rotate(15deg);
+
+}
+
+
+/* =========================================
+   LOCATION CARD
+========================================= */
+
+.location-card {
+
+    background: var(--black);
+
+    color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+
+.location-card h3 {
+
+    color: var(--yellow);
+
+    font-size: 18px;
+
+}
+
+
+.location-card p {
+
+    margin-top: 10px;
+
+    line-height: 1.6;
+
+}
+
+
+.location-card .near {
+
+    color: #dddddd;
+
+}
+
+
+/* =========================================
+   MAP BUTTON
+========================================= */
+
+.map-button {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 13px 20px;
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+
+}
+
+
+.map-button:hover {
+
+    transform: scale(1.03);
+
+}
+
+
+/* =========================================
+   HOURS
+========================================= */
+
+.hours-section {
+
+    text-align: center;
+
+    padding: 45px 20px;
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+}
+
+
+.clock {
+
+    font-size: 45px;
+
+}
+
+
+.hours-section h2 {
+
+    font-size: 25px;
+
+    margin-top: 5px;
+
+}
+
+
+.time {
+
+    margin-top: 10px;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+}
+
+
+.hours-section p {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.final-section {
+
+    position: relative;
+
+    padding: 55px 20px;
+
+    text-align: center;
+
+    background: var(--cream);
+
+    overflow: hidden;
+
+}
+
+
+.final-section h2 {
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+}
+
+
+.final-section p {
+
+    margin-top: 8px;
+
+    color: var(--grey);
+
+}
+
+
+.final-graphic {
+
+    position: absolute;
+
+    font-size: 130px;
+
+    opacity: 0.08;
+
+    right: -25px;
+
+    top: 5px;
+
+    transform: rotate(20deg);
+
+}
+
+
+/* =========================================
+   FINAL BUTTON
+========================================= */
+
+.final-button {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 15px 35px;
+
+    background: var(--black);
+
+    color: var(--yellow);
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    box-shadow:
+        5px 5px 0 var(--yellow);
+
+    transition: 0.2s;
+
+}
+
+
+.final-button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background: var(--black);
+
+    color: white;
+
+}
+
+
+.footer-logo {
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.footer-logo span {
+
+    color: var(--yellow);
+
+}
+
+
+footer p {
+
+    margin-top: 8px;
+
+    color: #cccccc;
+
+    font-size: 13px;
+
+}
+
+
+.social {
+
+    margin-top: 15px;
+
+    color: var(--yellow);
+
+    font-weight: 600;
+
+}
+
+
+.copyright {
+
+    margin-top: 25px !important;
+
+    font-size: 11px !important;
+
+    color: #777777 !important;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+
+        min-height: 500px;
+
+        padding: 35px 15px;
+
+    }
+
+
+    .logo {
+
+        width: 135px;
+
+        height: 135px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .categories {
+
+        font-size: 12px;
+
+    }
+
+
+    .hero-text {
+
+        font-size: 18px;
+
+    }
+
+
+    .image-wrapper img {
+
+        height: 240px;
+
+    }
+@media (max-width: 400px) {
+
+    .slider {
+        height: 240px;
+    }
+
+}
+}
